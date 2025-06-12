@@ -6,17 +6,20 @@
 </head>
 
 <body>
-  <div>Hello</div>
+  <div class="media"><h1>Hello</h1></div>
   <style>
     @media screen and (max-width:1000px) {
-      div {
+      .media h1{
         color: red;
+        background-color: blue;
       }
+      
     }
 
     @media screen and (max-width:600px) {
-      div {
+      .media h1 {
         color: blue;
+        background-color: red;
       }
     }
 
@@ -41,6 +44,22 @@
       background-color: black;
       padding: 5px;
     }
+    @media screen and (min-width : 250px) {
+      .flem{
+        display : flex;
+        flex-direction: row;
+        margin-top : 50px;
+        border: 2px solid black;
+      }
+  }
+  @media screen and (max-width : 250px) {
+    .flem{
+      flex-direction: column;
+      margin: 50px 0 0 0;
+      border: 2px solid black;
+    }
+}
+  
   </style>
   <div class="flex">
     <div class="flex1">
@@ -70,15 +89,20 @@
     <h2 class="grow3">three</h2>
     <h2 class="grow4">four</h2> 
   </div>
+  <!-- ================================
+  ASSIGNMENT -->
   <div class="ex">
-    <div class="ex1">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <!-- ============================ -->
+  <div class="flem">
+    <img class = "flem1" src="../images/noodles.png" alt="noodles">
+    <p class="flem2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias nulla amet consectetur modi et aperiam asperiores, perferendis assumenda voluptatum natus.</p>
   </div>
 
   <style>
@@ -87,6 +111,7 @@
       background-color: black;
       margin: 5px;
       padding: 5px;
+      text-shadow: 0 0 10px cyan;
     }
 
     .num {
@@ -110,10 +135,19 @@
     }
     .ex{
       margin-top: 100px;
-      width: 300px;
-      height: 300px;
-      background-color: turquoise;
-      text-align: center;
+      background-color: black;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .ex div{
+      width: 200px;
+      height: 50px;
+      background-color: gold;
+      margin: 10px;
+      border-radius: 10px;
     }
   </style>
   

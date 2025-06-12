@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>FLEX AND MEDIA</title>
+    </head>
+    <body>
+        <style>
+            *{
+               margin: 0px;
+               padding: 0px;
+            }
+            .container{
+                
+                display: flex;
+                flex-wrap: wrap;
+                border: 2px solid black;
+                align-items: stretch;
+                
+             
+               
+            }
+            .box1{
+                background-color:rgb(119, 222, 119);
+                height: 100px;
+                width: 100px;
+                margin: 5px;
+            }
+            .box2{
+                background-color: cyan;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .box3{
+                background-color: rgb(163, 162, 162);
+                height: 100px;
+                width: 100px;
+                margin: 5px;
+            }
+        </style>
+        <div class="container">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+        </div>
+        <style>
+            
+            @media screen and (min-width : 0px) {
+                .box1{
+                    flex-basis: 100%;
+                  
+                }
+                .box2{
+                    flex-basis: 100%;
+                    
+                }
+                .box3{
+                    flex-basis: 100%;
+                  
+                }
+            }
+            @media screen and (min-width : 641px) {
+                .box1{
+                    flex-basis: 100%;
+                    
+                }
+                .box2{
+                    flex-basis: 100%;
+                    flex-grow: 1;
+                    
+                }
+                .box3{
+                    flex-basis: 48%;
+                    margin-right: 10px;
+                    flex-grow: 1;
+                    
+                }
+            }
+            
+            @media screen and (min-width : 1000px) {
+                .box1{
+                    flex-basis: 100%;
+                }
+                .box2{
+                    flex-basis: 30%;
+                }
+                .box3{
+                    flex-basis: 23%;
+                    flex-grow: 1;
+                }
+            }
+        </style>
+    </body>
+</html>
