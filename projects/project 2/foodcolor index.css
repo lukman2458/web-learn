@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+.name{
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+}
+ul{
+    text-align: center;
+}
+li{
+    color: grey;
+    display: inline;
+}
+li:hover{
+    color: crimson;
+    cursor: pointer;
+}
+.name:hover{
+    color: turquoise;
+    cursor: pointer;
+}
+.search{
+    height: 20px;
+    width: 500px;
+}
+.searchbar{
+    margin: 50px;
+    text-align: center;
+}
+.ig1{
+    
+    width: 220px;
+    border:1px solid black;
+    display: inline-block;
+}
+.main{
+    margin-top: 50px;
+    text-align: center;
+}
+p:hover{
+    color: turquoise;
+    cursor: pointer;
+}
+.contact{
+    height: 200px;
+    width: 100%;
+    background-color: black;
+}
+.contaact{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+table{
+    color: white;
+}
+.send{
+    color: black;
+    background-color:magenta;
+    height: 20px;
+    width: 400px;
+    margin-left: 35%;
+    text-align: center;
+
+}
+form{
+    margin-left: 40%;
+}
+.contaact:hover{
+    color: turquoise;
+    cursor: pointer;
+}
+.buy{
+    color: white;
+    height: 20px;
+    width: 100px;
+    background-color: black;
+    margin-left: 70px;
+}
+.buy:hover{
+    color: crimson;
+    cursor: pointer;
+}
+.send:hover{
+    color: yellow;
+    cursor: pointer;
+}
