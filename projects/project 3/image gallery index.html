@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>image</head>
+<head><title>image gallery</title>
+</head>
 
 <body>
     <div class="color">
@@ -33,6 +34,15 @@
             <h2>NOODLES</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
         </div>
+        <div><img src="../../images/noodles.png" alt="noodles" class="one5">
+            <h2>NOODLES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+        <div><img src="../../images/noodles.png" alt="noodles" class="one5">
+            <h2>NOODLES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+
     </div>
 </body>
 <style>
@@ -47,7 +57,7 @@
     }
 
     .img {
-        /* justify-content: space-around; */
+        justify-content: space-around;
         display: flex;
         flex-wrap: wrap;
     }
@@ -58,20 +68,12 @@
     .img div{
         width: 250px;
         color: brown;
-        flex-grow: 1;
+        flex-basis: 25%;
     }
     .img div h2{
         color: black;
     }
-    .one{
-        flex-grow: 1;
-    }
-    .one1{
-        flex-grow: 2;
-    }
-    .one2{
-        flex-grow: 2;
-    }
+
 </style>
 
 </html>
