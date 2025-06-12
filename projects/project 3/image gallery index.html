@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>image</head>
+
+<body>
+    <div class="color">
+        <h1>IMAGE GALLERY</h1>
+    </div>
+    <div class="img">
+        <div>
+            <img src="../../images/biryani.png" alt="biryani" class="one">
+            <h2>BIRYANI</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+        <div><img src="../../images/naan.png" alt="naan" class="one1">
+            <h2>NAAN</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+        <div><img src="../../images/noodles.png" alt="noodles" class="one2">
+            <h2>NOODLES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+        <div><img src="../../images/biryani.png" alt="biryani" class="one3">
+            <h2>BIRYANI</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+        <div><img src="../../images/naan.png" alt="naan" class="one4">
+            <h2>NAAN</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+        <div><img src="../../images/noodles.png" alt="noodles" class="one5">
+            <h2>NOODLES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempora unde odit ab aliquid cupiditate accusamus, quia animi aut porro.</p>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        background-color: burlywood;
+    }
+
+    .color {
+        margin: 0px;
+        color: black;
+        text-align: center;
+    }
+
+    .img {
+        /* justify-content: space-around; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img {
+        margin: 10px;
+    }
+    .img div{
+        width: 250px;
+        color: brown;
+        flex-grow: 1;
+    }
+    .img div h2{
+        color: black;
+    }
+    .one{
+        flex-grow: 1;
+    }
+    .one1{
+        flex-grow: 2;
+    }
+    .one2{
+        flex-grow: 2;
+    }
+</style>
+
+</html>

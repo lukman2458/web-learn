@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    
-  </head> 
-  <body>
-    <div>Hello</div>
-    <style>
-     @media screen and (max-width:600px){
-      div{
+
+<head>
+
+</head>
+
+<body>
+  <div>Hello</div>
+  <style>
+    @media screen and (max-width:1000px) {
+      div {
         color: red;
       }
-     }
-      @media screen and (max-width:400px){
-        div{
-          color: blue;
-        }
+    }
+
+    @media screen and (max-width:600px) {
+      div {
+        color: blue;
       }
-    </style>
-  </body> 
+    }
+
+    /* ======================================== */
+    .flex {
+      border: 8px solid greenyellow;
+      background-color: greenyellow;
+    }
+
+    .flex1 {
+      display: flex;
+    }
+
+    .flex2 {
+      display: flex;
+      margin-top: -25px
+    }
+
+    h1 {
+      margin-right: 5px;
+      color: white;
+      background-color: black;
+      padding: 5px;
+    }
+  </style>
+  <div class="flex">
+    <div class="flex1">
+      <h1>ONE</h1>
+      <h1>TWO</h1>
+      <h1>THREE</h1>
+    </div>
+    <div class="flex2">
+      <h1>FOUR</h1>
+      <h1>FIVE</h1>
+      <h1>SIX</h1>
+    </div>
+  </div>
+  <!-- ================================================= -->
+  <!-- INSTEAD OF DOING THIS WE CAN SIMPLY DO LIKE THIS ⬇️ -->
+  <div class="num">
+    <h2 class="num1">ONE</h2>
+    <h2 class="num1">TWO</h2>
+    <h2 class="num1">THREE</h2>
+    <h2 class="num1">FOUR</h2>
+    <h2 class="num1">FIVE</h2>
+    <h2 class="num1">SIX</h2>
+  </div>
+
+  <style>
+    .num1 {
+      color: wheat;
+      background-color: black;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .num {
+      margin-top: 20px;
+      background-color: green;
+      display: flex;
+      width: 300px;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+  </style>
+  
+</body>
+
 </html>
