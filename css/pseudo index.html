@@ -1,106 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <nav>
-            <ul>
-                <li class="nb">NavBar</li>
-                <li>Home</li>
-                <li>About</li>
-                <li>Service</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-        <main>
-            <form>
-                <table>
-                    <tr>
-                        <th>NAME </th>
-                        <td><input type="text" placeholder="enter name"></td>
-                    </tr>
-                    <tr>
-                        <th>FAV COLORS </th>
-                        <td><input type="checkbox">RED <input type="checkbox">BLUE</td>
-                    </tr>
-                </table>
-            </form>
-        </main>
-        <ol>
-            <li class="n">ONE</li>
-            <li class="n">TWO</li>
-            <li class="n">THREE</li>
-            <li class="n">FOUR</li>
-            <li class="n">FIVE</li>
-        </ol>
-        <style>
-            *{
-                margin:0px;
-                padding: 0px;
-            }
-            body{
-                display: flex;
-                justify-content: center;
-            }
-            nav{
-                height: 25px;
-                display: flex;
-                border: 1px solid grey;
-                flex-basis: 100%;
-                position: fixed;
-                margin-top: 50px;
-                
-             }
-             ul{
-                 display: inline-flex;
-                 padding:5px;
-                 list-style-type: none;
-             }
-             li:not(.nb){
-             margin: 0 5px 0 0;
-             color: tomato;
 
-             }
-             .nb{
-                 margin-right: 50px;
-                 position: relative;
-                 right: 0;
-                 color: black;
-             }
-             li:hover{
-                 color: aqua;
-             }
-             ul:hover{
-                cursor: pointer;
-             }
-             li:active{
-                 color: rgb(242, 242, 131);
-             }
-             main{
-                 margin-top: 100px;
-             }
-             input:focus{
-                 border: 1px solid tomato;
-             }
-             input:checked{
-                 border: 5px solid tomato;
-             }
-             ol{
-                 margin: 200px 0 0 0 ;
-                 cursor: pointer;
-             }
-             .n:nth-child(-n+3){
-                 color: rgb(142, 242, 142);
-             }
-             .n:nth-last-child(-n+2){
-                 color: rgb(113, 113, 228);
-             }
-             .n:nth-child(3){
-                 background-color: rgb(101, 23, 23)
-             }
-             .n:not(:nth-child(2)){
-                 font-size: 1.1rem;
-             }
+<head></head>
 
-        </style>
-    </body>
+<body>
+    <nav>
+        <ul>
+            <li class="nb">NavBar</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <ol>
+        <li class="n">ONE</li>
+        <li class="n">TWO</li>
+        <li class="n">THREE</li>
+        <li class="n">FOUR</li>
+        <li class="n">FIVE</li>
+    </ol>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            height: 25px;
+            display: flex;
+            border: 1px solid grey;
+            position: fixed;
+            top: 10px;
+
+        }
+
+        ul {
+            display: inline-flex;
+            padding: 5px;
+            list-style-type: none;
+        }
+
+        li:not(.nb) {
+            margin: 0 5px 0 0;
+            color: tomato;
+
+        }
+
+        .nb {
+            margin-right: 50px;
+            position: relative;
+            right: 0;
+            color: black;
+        }
+
+        li:hover {
+            color: aqua;
+        }
+
+        ul:hover {
+            cursor: pointer;
+        }
+
+        li:active {
+            color: rgb(242, 242, 131);
+        }
+
+        ol {
+            margin: 50px 0 0 0;
+            cursor: pointer;
+        }
+
+        .n:nth-child(-n+3) {
+            color: rgb(142, 242, 142);
+        }
+
+        .n:nth-last-child(-n+2) {
+            color: rgb(113, 113, 228);
+        }
+
+        .n:nth-child(3) {
+            background-color: rgb(101, 23, 23)
+        }
+
+        .n:not(:nth-child(2)) {
+            font-size: 1.1rem;
+        }
+
+        .n:hover {
+            background: rgb(166, 110, 219);
+        }
+    </style>
+<!-- ============================================================= -->
+ 
+</body>
+
 </html>

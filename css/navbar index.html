@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NAVBAR</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">NAVBAR</div>
+        <ul class="menu">
+            <li class="one" id="on"><a href="">HOME</a></li>
+            <li class="one"><a href="">ABOUT</a></li>
+            <li class="one"><a href="">HELP</a></li>
+        </ul>
+    </nav>
+    <style>
+        *{
+           padding: 0px;
+           margin: 0px;
+           box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            border: 2px solid grey;
+            background: rgb(72, 67, 67);
+            justify-content: space-between;
+            align-items: center;
+
+            cursor: pointer;
+        }
+        .menu{
+            display: flex;
+            gap: 20px; 
+            /* >>>>>>>>>>> We cant use justify-content bcz there is no space 
+            like border or width set<<<<<<<<<<<<<<< */
+            list-style: none;
+            margin-right: 10px;
+            color: white;
+            font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        .logo{
+            color: white;
+            font-family: cursive;
+            padding: 10px;
+            position: relative;
+        }
+        .one a:hover{
+            background-color: rgb(40, 38, 38);
+            font-size: 0.95rem;
+            color: darkgrey;
+        }
+        .one a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+            position: relative;
+        }
+        .logo:hover{
+            background-color: rgb(40, 38, 38);
+            font-size: 1.05rem;
+            color:darkgray;
+        }
+        .one a:hover::after{
+            content: "";
+            background: black;
+            width: 2px;
+            height: 38px;
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            
+             }
+        .one a:hover::before{
+            content: "";
+            background: black;
+            width: 2px;
+            height: 38px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            
+             }
+         .logo:hover::after{
+            content: "";
+            background: black;
+            width: 2px;
+            height: 38px;
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            
+             }
+        .logo:hover::before{
+            content: "";
+            background:black;
+            width: 2px;
+            height: 38px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+             }
+        .logo:active{
+            color: tomato;
+        }
+        .one a:active{
+              color: tomato;
+        }
+        
+    </style>
+    <!-- ================================================================= -->
+    <!-- 1.SET gap for menu items -->
+    <!-- 2.SET padding for each instead of nav -->
+    <!-- 3.SET position relative and absolute for same element when hover after to set for
+    every list -->
+</body>
+</html>
