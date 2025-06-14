@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ANIMATION</title>
+</head>
+<body>
+    <div class="trans">
+        <div class="but1">TOUCH</div>
+        <div class="but2">TOUCH</div>
+        <div class="circle"></div>
+    </div>
+   
+    <style>
+        .trans{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20%;
+            gap: 50px;
+
+        }
+        .but2,.but1{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+            font-size: large;
+         }
+         .but2{
+             color: black;
+             background-color: rgb(236, 236, 117);
+         }
+         .but2:hover{
+            animation: move 1s ease 0.2s 1 running both ;
+         }
+        .but1{
+          
+            background-color: rgb(138, 127, 127);
+            border-radius: 10px;
+            transition: all 0.4s ease 0s ;
+            color: black;
+        }
+        .but1:hover{
+            transform: scale(1.5,1.5);
+            background-color: tomato;
+            color: azure;
+        }
+        .circle{
+            width: 20px;
+            height: 20px;
+            background-color: turquoise;
+            border-radius: 50%;
+        }
+        .circle:hover{
+            animation: pulse 0.5s ease 0s infinite ;
+        }
+        @keyframes move{
+            0%{transform: translateX(0)
+                rotatez(0);
+                opacity: 1;}
+            100%{transform: translateX(200px)
+             rotatez(360deg);
+             opacity: 0;}
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(1,1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(2,2);
+                opacity: 1;
+            }
+            50%{
+                opacity: 0.5;
+            }
+
+        }
+    </style>
+</body>
+</html>
