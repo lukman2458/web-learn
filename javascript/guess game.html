@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Document</title>
+</head>
+<body>
+<h2>GUESS THE NUMBER 1 TO 10 </h2>
+ <input id="num">
+ <button id="check" onclick="gus()">CHECK</button>
+ <p id="result"></p>
+ <p id="score">SCORE : 10</p>
+  <script>
+      var random = Math.floor(Math.random()*10)+1
+      var guess = document.getElementById("num")
+      var result = document.getElementById("result")
+      var score = document.getElementById("score")
+      var scores = 10
+      
+      function gus(){
+         var guessval = Number(guess.value)
+            if(guessval > random){
+              result.textContent = "Number is higher"
+              scores = scores-1
+              score.textContent = "SCORE : "+scores
+            }
+            else if(guessval < random){
+              result.textContent = "Number is lower"
+              scores = scores-1
+              score.textContent = "SCORE : "+scores
+            }
+            else{
+                result.textContent = "CORRECT..!" + random
+                score.textContent = "SCORE : "+scores
+            }
+        if(scores<=0){
+            result.textContent = "Out of Chances..! answer is" + random
+            score.textContent = "SCORE : "+scores
+        }
+      }
+
+  </script>
+</body>
+</html>

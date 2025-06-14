@@ -1,0 +1,49 @@
+1.variables 
+2.functions
+3.if else
+4.for loops
+5.DOM
+
+
+
+========================================================================
+VARIABLES
+    var a = 0
+    var name = "unknown"
+    console.log(name + a + "inside qotation prints")
+-------------------------------------------------
+FUNCTIONS
+    function anyname(parameters,para)
+    {
+        any execution
+    }
+    anyname() >>> function calling
+-------------------------------------------------
+IF ELSE
+    if(condition)
+    { execution }
+
+    else if(cond)
+    { execution }
+
+    else
+    { execution }
+--------------------------------------------------
+FOR LOOPS
+    for(start;condition;iteration)
+    {
+        execution
+    }
+--------------------------------------------------
+DOM Manipulation:
+    document.getElementById("id name") >>> getting 
+    var_name.textContent >> its texts
+    var_name.value >>> its numbers
+
+ EVENTS
+    onclick = "execution or call_func"
+----------------------------------------------------
+RANDOM
+    Math.random() >> from 0 to 0.9999
+    Math.floor() >> make it whole number
+

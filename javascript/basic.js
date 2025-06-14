@@ -22,3 +22,9 @@ if (c == 80)
 else{console.log("false")}
 //Task 4 : if else 
 // ===============
+for(i=1;i<=3;i=i+1)
+{
+    console.log(i + ' x 2 = ' +i*2 )
+}
+//Task 5 : for loop for(start;condition;iteration)
+//================================================
