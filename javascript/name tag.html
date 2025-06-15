@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">Name</h1>
+    <button onclick="update(event)">Hashim</button>
+    <button onclick="update(event)">Asif</button>
+    <button onclick="update(event)">Naufal</button>
+    <script>
+        var a = document.getElementById("a")
+        function update(event){
+            a.textContent = event.target.textContent
+        }
+    </script>
+</body>
+</html>

@@ -48,6 +48,9 @@ DOM Manipulation:
 
  EVENTS
     onclick = "execution or call_func"
+    onkeyup = ""
+    func(event)
+        event.target.textContent
 ----------------------------------------------------
 RANDOM
     Math.random() >> from 0 to 0.9999
