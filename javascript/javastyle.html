@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STYLING JS</title>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="but" onclick="change()"> RED </button>
+    <!-- ------------------------------------------------------------------------- -->
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+        .big{
+           margin: 0 auto;
+            transition:1s;
+         }
+
+    </style>
+    <!-- ------------------------------------------------------------------------- -->
+    <script>
+        var bo = document.getElementById("box")
+        // ----------------------------------------
+        function change(){
+            bo.style.backgroundColor = "red";
+            bo.setAttribute("class","big")
+        }
+
+
+    </script>
+    <!-- ------------------------------------------------------------------------- -->
+</body>
+</html>

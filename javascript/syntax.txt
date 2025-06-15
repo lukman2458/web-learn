@@ -40,6 +40,9 @@ DOM Manipulation:
     var_name.textContent >> its texts
     var_name.value >>> its numbers
 
+    var_name.style.property = " ";
+    var_name.setAttribute("attribute","name") >> attributes are class,id,src..
+
  EVENTS
     onclick = "execution or call_func"
 ----------------------------------------------------
