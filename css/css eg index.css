@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+     
+<style>
+  .ps{
+    margin-left: 50px;
+    border : 10px solid black;
+  }
+   .cn{
+    margin-left: 50px;
+    margin-top: 10px;
+    border : 10px solid black;
+  }
+  .p3{ 
+    color: white;
+    background-color: black;
+    height: 20px;
+    width: 350px;
+    padding : 10px ;
+   text-align: center;
+  }
+  .p4{
+    color : black;
+    background-color : grey;
+    border : 8px solid black;
+    margin : 10px;
+    padding : 30px;
+  }
+  .bx{
+    display: inline-block;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+  }
+  .b2x{
+    display: inline-block;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+  }
+  .tx{
+    display: inline;
+    background-color: yellow;
+  }
+  .t2x{
+    display: inline;
+    background-color: red;
+  }
+</style>
+<div class="p3">Lukman</div>
+<p class ="p4">jsbjd jsieh isjeb isi8w i28u2 8wb s isb iie koksi ke99i us8ey</p>
+<div class = "bx"></div>
+<div class = "b2x"></div>
+<h4 class = "tx" >Hi</h4>
+<h4 class = "t2x">Bye</h4>
+  </body>
+</html>
