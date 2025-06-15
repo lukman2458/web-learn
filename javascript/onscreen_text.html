@@ -5,20 +5,33 @@
 </head>
 <body>
     <input id="text">
-    <hr>
     <h3 id="output">TYPE</h3>
     <hr>
+    <!-- ---------------------------------------- -->
     <button id = "add">ADD</button>
     <div id = "hello"></div>
+    <hr>
+    <!-- ---------------------------------------- -->
+    <h3 id="name">NAME</h3>
+    <button id="names">Asif</button>
+    <button>Naufal</button>
+    <button>Hashim</button>
     <!-- ---------------------------------------- -->
     <script>
       var text = document.getElementById("text")
       var output = document.getElementById("output")
      document.getElementById("text").onkeyup = function test(){output.textContent = text.value}
+    //  --------------------------------------------------------
       var hello = document.getElementById("hello")
       var add = document.getElementById("add").onclick = function go(){var addingh1 = document.createElement("h1") 
         addingh1.textContent = "HELLO"
         hello.append(addingh1)
+      }
+      // -----------------------------------------
+      var name = document.getElementById("name")
+      var names = document.getElementById("names")
+      names.onclick = function click(){ console.log("button")
+      name.textContent = "Asif"
       }
     </script>
     <!-- ---------------------------------------- -->

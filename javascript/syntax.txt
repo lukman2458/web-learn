@@ -37,6 +37,9 @@ FOR LOOPS
 --------------------------------------------------
 DOM Manipulation:
     document.getElementById("id name") >>> getting 
+    document.createElement("tag") >> creating tag don't forget to append
+    document.parent.append("var_of_create_tag") >> for creating element
+    var_parent.append(var_of_create_tag) >> for creating element
     var_name.textContent >> its texts
     var_name.value >>> its numbers
 

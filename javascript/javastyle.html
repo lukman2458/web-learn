@@ -6,6 +6,9 @@
 <body>
     <div id="box"></div>
     <button id="but" onclick="change()"> RED </button>
+    <hr>
+    <button id="col" onclick="col1()">CHANGE COLOR</button>
+
     <!-- ------------------------------------------------------------------------- -->
     <style>
         #box{
@@ -17,16 +20,24 @@
            margin: 0 auto;
             transition:1s;
          }
+         #col{
+             background-color: beige;
+         }
 
     </style>
     <!-- ------------------------------------------------------------------------- -->
     <script>
         var bo = document.getElementById("box")
+        document.getElementById("col")
         // ----------------------------------------
         function change(){
             bo.style.backgroundColor = "red";
             bo.setAttribute("class","big")
         }
+        function col1(){
+            col.style.backgroundColor = "red"
+        }
+
 
 
     </script>
