@@ -17,12 +17,12 @@
             </tr>
             <tr>
                 <th>Gender</th>
-                <td><input type="radio" name="Gender">Male
-                <input type="radio" name="Gender">Female</td>
+                <td id="gen"><input type="radio" name="Gender" value="Male">Male
+                <input type="radio" name="Gender" value="Female">Female</td>
             </tr>
             <tr>
                 <th>Cource</th>
-                <td><select>
+                <td><select id="select">
                     <option>JavaScript</option>
                     <option>Python</option>
                     <option>C++</option>
@@ -30,21 +30,25 @@
             </tr>
             <tr>
                 <th>E-mail</th>
-                <td><input type="email"></td>
+                <td><input id="email" type="email"></td>
             </tr>
         </table>
-        <button id="sav" onclick="save()">Save</button>
+        <button id="sav" onclick="save(event)">Save</button>
     </form>
     <form>
-        <table id="output" border="">
+        <table  border="">
+           <tbody id="output">
             <tr id="sep">
-                <td>Name</th>
+                <th>Name</th>
                 <th>Age</th>
                 <th>Course</th>
                 <th>Gender</th>
                 <th>Email</th>
                 <th>Action</th>
             </tr>
+
+           </tbody> 
+           
         </table>
     </form>
 <!-- ========================================================================================================== -->
@@ -63,26 +67,52 @@
             box-sizing: border-box;
             display: flex;
             align-items: center;
+            color: to;
             flex-direction: column;
+            background: rgb(166, 57, 78);
+            color: rgb(208, 208, 130);
         }
         #forum{
             border: 1px solid black;
             padding: 10px;
             margin-bottom: 50px;
         }
+        #del{
+            width: 100%;
+            background-color: crimson;
+            color: wheat;
+        }
         
     </style>
 <!-- ========================================================================================================== -->
     <script>
-        var name = document.getElementById("name")
+        var nameinput = document.getElementById("name")
         var output = document.getElementById("output")
-        function save(){
+
+        // -----------------------------------------------
+        function save(event){
+            event.preventDefault();
+           var name  = nameinput.value
+           var email = document.getElementById("email").value
+           var age = document.getElementById("age").value
+           var select = document.getElementById("select").value
+           var gender = document.querySelector('input[name = "Gender"]:checked').value
            var tr = document.createElement("tr")
            output.append(tr)
-           var td1 = document.createElement("td")
-           td1.textContent = name.value
-           tr.append(td1)
+           tr.innerHTML =`<td>${name}</td>
+           <td>${age}</td>
+           <td>${select}</td>
+           <td>${gender}</td>
+            <td>${email}</td>
+            <td><button id = "del" onclick = "delet(event)">DELETE</button></td>
+            `
+            ;
         }
+        function delet(event){
+
+            event.target.closest("tr").remove()
+           }
+       
     </script>
 </body>
 </html>

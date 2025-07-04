@@ -44,32 +44,36 @@ ARRAY
 -------------------------------------------------------------------------------------------------------
 
 DOM Manipulation:
-    document.querySelector(". or # or tag") >> getting if tag then 1st one is selected
-    document.getElementById("id name") >>> getting specifically id
-    document.getElementsByClassNames("class name") >>> getting specically class
-    document.getElementByTagName("tag name") >>> getting specically tag
-    document.querySelectorAll(". or # or tag") >> for selcting all
+    document.querySelector(". or # or tag")                              >> getting if tag then 1st one is selected
+    document.getElementById("id name")                                   >>> getting specifically id
+    document.getElementsByClassNames("class name")                       >>> getting specically class
+    document.getElementByTagName("tag name")                             >>> getting specically tag
+    document.querySelectorAll(". or # or tag")                           >> for selcting all
+    document.querySelector("input[name = ""]:checked")                   >> for radio type useful for gender
     --------------------------------------------------------------------------------------
-    document.createElement("tag") >> creating tag don't forget to append
-    document.parent.append("var_of_create_tag") >> for creating element
-        var_parent.append(var_of_create_tag) >> for creating element
+    document.createElement("tag")                                        >> creating tag don't forget to append
+    document.var_parent.append("var_of_create_tag")                      >> for creating element
+        var_parent.append(var_of_create_tag)                             >> for creating element
 
-    var_name.textContent >> its texts
-    var_name.value >>> its numbers
-    var_name.innerHTML = "tag_content_tag" >> access child or add tags
-    var_name.append() >> add at end
-    var_name.prepend() >> add at start
-    var_name.insertAdjacentElement("where",which element) >> custom adding
+    var_name.textContent                                                 >> its texts
+    var_name.value                                                       >>> its numbers
+    var_name.innerHTML = "tag_content_tag"                               >> access child or add tags
+    var_name.append()                                                    >> add at end
+    var_name.prepend()                                                   >> add at start
+    var_name.insertAdjacentElement("where",which element)                >> custom adding
 
     var_name.style.property = " ";
-    var_name.setAttribute("attribute","name") >> attributes are class,id,src..
+    var_name.setAttribute("attribute","name")                             >> attributes are class,id,src..
     ----------------------------------------------------------------------------------------
  EVENTS
-    onclick = "execution or call_func"
-    onkeyup = ""
-    func(event)
+    onclick = "name()"
+    onkeyup = "name()"
+    func name(event)
         event.target.textContent
         event.target.remove()
+        event.target.parentNode
+        event.target.closest("tag")
+        event.preventDefault()                                             >> prevents from loading
 -----------------------------------------------------------------------------------------------------
 
 
