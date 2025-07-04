@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+    <h1>STUDENT FORM</h1>
+    <form id="forum">
+        <table border="1px">
+            <tr>
+                <th>Name</th>
+                <td><input id="name" type="text"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input id="age" type="number"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td><input type="radio" name="Gender">Male
+                <input type="radio" name="Gender">Female</td>
+            </tr>
+            <tr>
+                <th>Cource</th>
+                <td><select>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>C++</option>
+                </td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td><input type="email"></td>
+            </tr>
+        </table>
+        <button id="sav" onclick="save()">Save</button>
+    </form>
+    <form>
+        <table id="output" border="">
+            <tr id="sep">
+                <td>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </form>
+<!-- ========================================================================================================== -->
+    <style>
+        #sav{
+            text-align: center;
+            background-color: lightseagreen;
+            color: black;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        body{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #forum{
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+        
+    </style>
+<!-- ========================================================================================================== -->
+    <script>
+        var name = document.getElementById("name")
+        var output = document.getElementById("output")
+        function save(){
+           var tr = document.createElement("tr")
+           output.append(tr)
+           var td1 = document.createElement("td")
+           td1.textContent = name.value
+           tr.append(td1)
+        }
+    </script>
+</body>
+</html>
