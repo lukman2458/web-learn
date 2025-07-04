@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">
+        <h1>TWO</h1>
+        <h1>THREE</h1>
+    </div>
+    <button onclick="add()">ADD</button>
+    
+    <script>
+        var div = document.querySelector("#test")
+        function add(){
+           var h1 = document.createElement("h1")
+            h1.textContent = "ONE"
+            div.insertAdjacentElement("beforebegin",h1)
+        }
+
+    </script>
+    
+</body>
+</html>
