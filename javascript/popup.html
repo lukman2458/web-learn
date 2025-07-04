@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Popup</title>
+</head>
+<body>
+    <button id="pop">SHOW</button>
+    <div id="screen">hello</div>
+    <div id="open">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nulla consequuntur quia natus accusamus distinctio vitae pariatur soluta ipsa ea, nam perferendis labore similique possimus eveniet earum dolorem, cum animi.</p>
+        <button id="close">CLOSE</button>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <script>
+        var pop = document.querySelector("#pop")
+        var screen = document.querySelector("#screen")
+        var open = document.querySelector("#open") 
+        var close = document.querySelector("#close")
+
+        pop.addEventListener("click",function(){
+            screen.style.display = "block"
+            open.style.display = "block"
+        })
+        close.addEventListener("click",function(){
+            screen.style.display = "none"
+            open.style.display = "none"
+        })
+    </script>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <style>
+        #screen{
+            background-color: black;
+            width: 100%;
+            height: 800px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            z-index: 1;
+            display: none;
+        }
+        #open{
+            position: absolute;
+            border: 2px solid white;
+            padding: 20px;
+            width: 200px;
+            height: fit-content;
+            border-radius: 10px;
+            background-color: rgb(231, 87, 87);
+            top: 100px;
+            left: 400px;
+            z-index: 2;
+            display: none;
+        }
+
+    </style>
+</body>
+</html>
