@@ -7,14 +7,22 @@
     <input id="text">
     <hr>
     <h3 id="output">TYPE</h3>
+    <hr>
+    <button id = "add">ADD</button>
+    <div id = "hello"></div>
     <!-- ---------------------------------------- -->
     <script>
       var text = document.getElementById("text")
       var output = document.getElementById("output")
      document.getElementById("text").onkeyup = function test(){output.textContent = text.value}
+      var hello = document.getElementById("hello")
+      var add = document.getElementById("add").onclick = function go(){var addingh1 = document.createElement("h1") 
+        addingh1.textContent = "HELLO"
+        hello.append(addingh1)
+      }
     </script>
     <!-- ---------------------------------------- -->
 </body>
 </html>
 <!-- 1. stuck at how to store texts from input continiously when typing  -->
-        <!-- SOLN : we want to use onkeyup event | text.value instead of textContent for input-->
+        <!-- SOLN : we want to use onkeyup event | text.value instead of textContent -->
