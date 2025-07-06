@@ -7,22 +7,29 @@
     <title>Catch the Moused</title>
 </head>
 <body>
-    <h1 style="text-align:center;">Catch The Mouse</h1>
+    <h1 style="text-align:center;color: rgb(234, 38, 77);">Catch The Mouse</h1>
     <hr>
-    <h3 id="score">Score : </h3>
+    <h3 id="score">Score : 0</h3>
     <div id="border"></div>
     <div id="mouse"></div>
+    <button id="start">START</button>
     <!-- ---------------------------------------------------- -->
     <style>
+        @font-face{
+            font-family: 'squids';
+            src: url("../../assets/Fonts/game/squid.ttf")
+            format('truetype');
+        }
         #mouse{
             width: 50px;
             height: 50px;
-            background-color: rgb(198, 239, 126);
+            background-color: rgb(222, 222, 112);
             border-radius: 50%;
             border: 1px solid black;
             position: absolute;
             left: 150px;
             top: 170px ;
+            display: none;
         }
         #border{
             width: 1000px;
@@ -30,9 +37,26 @@
             border: 5px solid black;
             position: absolute;
             left: 140px;
-            margin-top: 20px;
+            margin-top: 70px;
             background-color: rgb(229, 90, 118);
         }
+        #score{
+            font-family: 'squids';
+            position: absolute;
+            left: 550px;
+            color: black;
+        }
+        #start{
+            font-family: 'squids';
+            background-color: transparent;
+            color: red;
+            font-size: 2rem;
+            position: absolute;
+            left: 550px;
+            top: 320px;
+            border: none;
+        }
+        
 
     </style>
     <!-- ---------------------------------------------------- -->
@@ -41,7 +65,7 @@
         var mouse = document.getElementById("mouse")
         mouse.addEventListener("click",function(){
          var x = Math.floor(Math.random()*900)+150
-         var y = Math.floor(Math.random()*350)+170
+         var y = Math.floor(Math.random()*345)+170
          mouse.style.left = `${x}px`
          mouse.style.top = `${y}px`
          s = s+1
@@ -50,6 +74,12 @@
         // --------------------------------------
         var score = document.querySelector("#score")
         var s = 0
+        // --------------------------------------
+        var start = document.getElementById("start")
+        start.addEventListener("click",function(){
+            mouse.style.display = "block"
+            start.style.display = "none"
+        })
     </script>
     <!-- ---------------------------------------------------- -->
 </body>
