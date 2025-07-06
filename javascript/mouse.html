@@ -9,11 +9,9 @@
 <body>
     <h1 style="text-align:center;">Catch The Mouse</h1>
     <hr>
-    <div id="score">
-        <h3>Score : </h3>
-    </div>
+    <h3 id="score">Score : </h3>
     <div id="border"></div>
-    <div id="mouse" onclick="go()"></div>
+    <div id="mouse"></div>
     <!-- ---------------------------------------------------- -->
     <style>
         #mouse{
@@ -39,17 +37,19 @@
     </style>
     <!-- ---------------------------------------------------- -->
     <script>
-        var x = Math.floor(Math.random()*900)+150
-        var y = Math.floor(Math.random()*470)+170
+
         var mouse = document.getElementById("mouse")
-        // mouse.addEventListener("click",function(){
-        //     mouse.style.left = `${x}px`
-        //     mouse.style.top = `${y}px`
-        // })
-     function go(){
-            mouse.style.left = `${x}px`
-            mouse.style.top = `${y}px`
-     }
+        mouse.addEventListener("click",function(){
+         var x = Math.floor(Math.random()*900)+150
+         var y = Math.floor(Math.random()*350)+170
+         mouse.style.left = `${x}px`
+         mouse.style.top = `${y}px`
+         s = s+1
+         score.textContent = "Score : " + s
+        })
+        // --------------------------------------
+        var score = document.querySelector("#score")
+        var s = 0
     </script>
     <!-- ---------------------------------------------------- -->
 </body>
