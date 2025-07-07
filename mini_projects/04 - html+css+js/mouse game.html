@@ -26,7 +26,8 @@
         }
         #status{
             text-align: center;
-            color: rgb(234, 38, 77);
+            left: 50px;
+            color: red;
             font-family:"squids";
             z-index: 3;
         }
@@ -73,11 +74,11 @@
             position: absolute;
             font-size: 1.5rem;
             left: 200px;
-            color: rgb(2, 201, 2);
+            color: black;
         }
         #overlay{
             width: 100%;
-            height: 600px;
+            height: 700px;
             position: absolute;
             top: 0px;
             left: 0px;
@@ -88,7 +89,7 @@
         }
         #result{
             font-family: "squids";
-            color: black;
+            color: white;
             font-size: 1.5rem;
             position: absolute;
             left: 550px;
@@ -120,7 +121,8 @@
         const clock_show = document.getElementById("clock_show")
         const overlay = document.getElementById("overlay")
         const result = document.getElementById("result")
-        let clock = 30
+        const status = document.getElementById("status")
+        let clock = 29
         start.addEventListener("click",function begin(){
             mouse.style.display = "block";
             start.style.display = "none";
@@ -132,7 +134,7 @@
             const time = setInterval(() => {
              clock_show.textContent = `TIME : ${clock}`
                clock--
-             if (clock == 20){
+             if (clock == -1){
                  clearInterval(time)
                  mouse.style.display = "none";
                  overlay.style.display = "block"
@@ -140,9 +142,11 @@
                  start.style.display = "block"
                  result.style.display = "block"
                  result.textContent = `Your Score : ${s}`
-                 clock = 30
+                 clock = 29
              }
-             if (clock < 10){
+             if (clock < 30)
+               clock_show.style.color = "green"
+             if (clock < 15){
                  clock_show.style.color = "yellow"
              }
              if (clock < 5){
