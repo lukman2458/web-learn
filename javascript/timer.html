@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <button id="start">START</button>
+    <p id="clock_show">30</p>
+    <script>
+        const start = document.getElementById("start")
+        const clock_show = document.getElementById("clock_show")
+        let clock = 30
+        start.addEventListener("click",function begin(){
+           const time = setInterval(() => {
+             clock_show.textContent = `${clock}`
+               clock--
+            },1000)
+        })
+       
+    </script>
+</body>
+</html>

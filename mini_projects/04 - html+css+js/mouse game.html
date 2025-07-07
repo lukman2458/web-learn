@@ -7,18 +7,28 @@
     <title>Catch the Moused</title>
 </head>
 <body>
-    <h1 style="text-align:center;color: rgb(234, 38, 77);">Catch The Mouse</h1>
+    <div id="status"><h1>Catch The Mouse</h1></div>
+    
     <hr>
     <h3 id="score">Score : 0</h3>
     <div id="border"></div>
     <div id="mouse"></div>
     <button id="start">START</button>
+    <p id="clock_show">TIME : 30</p>
+    <p id="result">YOUR SCORE : </p>
+    <div id="overlay"></div>
     <!-- ---------------------------------------------------- -->
     <style>
         @font-face{
             font-family: 'squids';
             src: url("../../assets/Fonts/game/squid.ttf")
             format('truetype');
+        }
+        #status{
+            text-align: center;
+            color: rgb(234, 38, 77);
+            font-family:"squids";
+            z-index: 3;
         }
         #mouse{
             width: 50px;
@@ -27,8 +37,8 @@
             border-radius: 50%;
             border: 1px solid black;
             position: absolute;
-            left: 150px;
-            top: 170px ;
+            left: 200px;
+            top: 190px ;
             display: none;
         }
         #border{
@@ -36,14 +46,15 @@
             height: 400px;
             border: 5px solid black;
             position: absolute;
-            left: 140px;
+            left: 150px;
             margin-top: 70px;
             background-color: rgb(229, 90, 118);
         }
         #score{
             font-family: 'squids';
             position: absolute;
-            left: 550px;
+            right: 150px;
+            top: 120px;
             color: black;
         }
         #start{
@@ -52,33 +63,92 @@
             color: red;
             font-size: 2rem;
             position: absolute;
-            left: 550px;
+            left: 570px;
             top: 320px;
             border: none;
+            z-index: 2;
         }
-        
+        #clock_show{
+            font-family: "squids";
+            position: absolute;
+            font-size: 1.5rem;
+            left: 200px;
+            color: rgb(2, 201, 2);
+        }
+        #overlay{
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: black;
+            opacity: 0.7;
+            display: block;
+            z-index: 1;
+        }
+        #result{
+            font-family: "squids";
+            color: black;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 550px;
+            top: 250px;
+            z-index: 2;
+            display: none;
+
+        }
+       
 
     </style>
     <!-- ---------------------------------------------------- -->
     <script>
 
-        var mouse = document.getElementById("mouse")
+        const mouse = document.getElementById("mouse")
         mouse.addEventListener("click",function(){
-         var x = Math.floor(Math.random()*900)+150
-         var y = Math.floor(Math.random()*345)+170
+         let x = Math.floor(Math.random()*850)+150
+         let y = Math.floor(Math.random()*345)+185
          mouse.style.left = `${x}px`
          mouse.style.top = `${y}px`
          s = s+1
          score.textContent = "Score : " + s
         })
         // --------------------------------------
-        var score = document.querySelector("#score")
-        var s = 0
+        const score = document.querySelector("#score")
+        let s = 0
         // --------------------------------------
-        var start = document.getElementById("start")
-        start.addEventListener("click",function(){
-            mouse.style.display = "block"
-            start.style.display = "none"
+        const start = document.getElementById("start")
+        const clock_show = document.getElementById("clock_show")
+        const overlay = document.getElementById("overlay")
+        const result = document.getElementById("result")
+        let clock = 30
+        start.addEventListener("click",function begin(){
+            mouse.style.display = "block";
+            start.style.display = "none";
+            overlay.style.display = "none";
+            result.style.display = "none"
+            start.textContent = "START"
+            s = 0
+            score.textContent = "Score : " + s
+            const time = setInterval(() => {
+             clock_show.textContent = `TIME : ${clock}`
+               clock--
+             if (clock == 20){
+                 clearInterval(time)
+                 mouse.style.display = "none";
+                 overlay.style.display = "block"
+                 start.textContent = "Play Again"
+                 start.style.display = "block"
+                 result.style.display = "block"
+                 result.textContent = `Your Score : ${s}`
+                 clock = 30
+             }
+             if (clock < 10){
+                 clock_show.style.color = "yellow"
+             }
+             if (clock < 5){
+                clock_show.style.color = "red"
+             }
+            },1000)
         })
     </script>
     <!-- ---------------------------------------------------- -->
