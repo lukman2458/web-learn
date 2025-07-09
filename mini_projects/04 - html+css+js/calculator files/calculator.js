@@ -21,16 +21,22 @@ buttons.forEach(function(butt){
      else if(butt.id == "AC"){
          output.value = ""
      }
+     else if(output.value == "ERROR"){
+         output.value = ""
+     }
      else{
         const num = /[0-9]/.test(value)
         const sam = /[+%*/-]/.test(last)
          if(reset && num && !sam){
             output.value = ""
-            reset = false
          }
-    
-         output.value += butt.textContent
+         reset = false
+         if(output.value == "0" && num){
+            output.value = value
+         }else{
+         output.value += value
         }
+    }
     })
 });
 
