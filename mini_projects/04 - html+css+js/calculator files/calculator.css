@@ -6,8 +6,8 @@
 }
 @font-face{
     font-family: "some";
-    src: url(../../../assets/Fonts/poppins/Poppins-Bold.ttf) 
-    format('true type');
+    src: url(../../../assets/Fonts/poppins/Poppins-Medium.ttf) 
+    format('truetype');
 }
 #centre_box{
     height: 100vh;
