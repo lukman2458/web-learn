@@ -1,0 +1,22 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#area{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows:  50px 50px 50px 50px 50px 50px  ;
+    border: 2px solid rgb(0, 0, 0);
+    gap: 10px;
+    width: 300px;
+    border-radius: 10px;
+    grid-template-areas: 
+    "output output output output"
+    "ac x . divi"
+    "seven eight nine mult"
+    "four five six sub" 
+    "one two three plus" 
+    "per zero dec equal" 
+    ;
+}
