@@ -57,6 +57,7 @@ a{
     align-items: center;
     flex: 1;
     max-width: 1000px;
+    height: 40px;
     border: 1px solid rgb(34, 32, 32);
     overflow: hidden;
     margin-left: 15px;
@@ -66,6 +67,7 @@ a{
     align-items: center;
     color: rgb(70, 67, 67);
     padding: 5px;
+    height: 100%;
     border-radius: 3px 0 0 3px ;
     background-color: rgb(222, 200, 200);
 }
@@ -87,11 +89,11 @@ a{
     margin: 0;
     width: 100%;
     min-width: 150px;
-    position: relative;
-    bottom: 1px;
+    height: 100%;
 }
 .searchicon img{
-    width: 25px;
+    width: 20px;
+    height: 20px;
     
 }
 .searchbar .all:hover{
@@ -99,10 +101,12 @@ a{
 }
 .searchicon{
     background-color: #febd69;
-    padding: 1.5px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
     border-radius: 0 3px 3px 0;
-    padding-right: 10px;
-    padding-left: 5px;
+   
+    height: 100%;
 }
 .searchicon:hover{
     background-color:#f1ac52 ;
