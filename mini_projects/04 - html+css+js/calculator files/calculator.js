@@ -21,7 +21,7 @@ buttons.forEach(function(butt){
      else if(butt.id == "AC"){
          output.value = ""
      }
-     else if(output.value == "ERROR"){
+     else if(output.value == "ERROR" ){
          output.value = ""
      }
      else{

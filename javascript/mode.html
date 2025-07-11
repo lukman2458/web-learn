@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Light Mode</title>
+</head>
+<body>
+    <div id="change">
+        <h1>LIGHT MODE DARK MODE</h1>
+     <button id="butt">Change to Dark</button>
+     <p id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias nemo delectus maiores facilis expedita recusandae officiis laudantium quam minima cumque sequi sed, voluptates ipsa magnam. Sit quaerat eu Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero impedit vel nulla distinctio quaerat optio minima facere amet repellendus, quisquam, tenetur aliquam? Dolorem necessitatibus perferendis, maxime officia voluptate similique laboriosam doloribus? Quisquam nesciunt perspiciatis unde. Quisquam tempore dignissimos deleniti atque, animi inventore blanditiis repellat saepe, illum fuga sapiente sit labore.</p>
+    </div>
+    
+
+    <style>
+        @font-face{
+            font-family: "some";
+            src: url(../assets/Fonts/game/squid.ttf )format('truetype');
+        }
+        body{
+           
+            font-family: "some";
+        }
+        #txt{
+            width: 500px;
+        }
+        h1{
+            margin: 75px 0 0 0 ;
+        }
+        #butt{
+            margin-top: 25px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        div{
+            transition: background-color 1s ease,color 1s ease;
+            background-color: white;
+            color: black;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script>
+        const txt = document.getElementById("txt")
+        const bod = document.getElementById("change")
+        let mode = false
+       const butt = document.getElementById("butt")
+       butt.addEventListener("click",()=>{
+            if(mode == false){
+             bod.style.color = "white"
+             bod.style.backgroundColor = "black"
+             mode = true
+             butt.style.borderColor = "white"
+             butt.style.backgroundColor = "black"
+             butt.style.color = "white"
+             butt.textContent = "Change to Light"
+
+            }
+            else{
+             bod.style.color = "black"
+             bod.style.backgroundColor = "white"
+             mode = false
+             butt.style.borderColor = "black"
+             butt.style.backgroundColor = "white"
+             butt.style.color = "black"
+             butt.textContent = "Change to Dark"
+            }
+            
+        })
+    </script>
+    
+
+</body>
+</html>
