@@ -378,3 +378,16 @@ main{
     }
     
 }
+.scroll-box{
+    font-weight: bold;
+    position: relative;
+    bottom: 35vh;
+    height: max-content;
+    margin: 0 50px 0 50px;
+    padding: 20px ;
+    background-color: #ffffff;
+}
+.scroll-container{
+    overflow-x: scroll;
+    display: flex;
+}
